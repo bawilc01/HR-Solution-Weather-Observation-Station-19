@@ -7,10 +7,9 @@ Solutions for MySQL and SQL Server
 [Euclidean Distance](https://en.wikipedia.org/wiki/Euclidean_distance)
 
 ## SQL SERVER:
-TBD
+SELECT CONVERT(DECIMAL(18, 4), (SQRT(POWER(MAX(LAT_N) - MIN(LAT_N), 2) + POWER(MAX(LONG_W) - MIN(LONG_W), 2))))
+FROM STATION;
 
 ## MySQL:
-TBD
-
-
-
+SELECT ROUND(SQRT(POWER(MAX(LAT_N) - MIN(LAT_N), 2) + POWER(MAX(LONG_W) - MIN(LONG_W), 2)), 4)
+FROM STATION;
